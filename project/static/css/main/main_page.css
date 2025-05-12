@@ -1,1 +1,320 @@
-/* main page - CSS */
+.alignRank{
+
+  display: flex;
+  justify-content: center;
+}
+.rankBox{
+  display: flex;
+  margin-top: 50px;
+  width: 970px;
+  height: 56px;
+  padding: 30px 40px;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 16px 83px ;
+border: 1px solid #E2E2E2;
+}
+.menuName{
+  display: flex;
+  width: 180px;
+  height: fit-content;
+  align-items: flex-start;
+  color: #333;
+/* B2 */
+font-family: Pretendard;
+font-size: 14px;
+font-style: normal;
+font-weight: 400;
+line-height: 20px; /* 142.857% */
+letter-spacing: -1px;
+}
+
+.menuName:hover{
+color: #5E0080;
+}
+
+
+.filterBox{
+  display: flex;
+  width: 220px;
+  flex-direction: column;
+  padding-bottom: 20px;
+  justify-content: space-between;
+  align-items: flex-start;
+  align-self: stretch;
+  border-bottom: 1px solid #E2E2E2;
+}
+.filter1{
+  display: flex;
+  width: 220px;
+  flex-direction: row;
+  align-items: flex-start;
+}
+.filter1-1{
+  color:  #333;
+  /* H3 */
+  font-family: Pretendard;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px; /* 133.333% */
+}
+.filter1-2{
+  display: flex;
+  align-items: center;
+  margin-left:auto;
+  color: #DDD;
+
+  /* H3 */
+  font-family: Pretendard;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px; /* 133.333% */
+}
+.categoryBox{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  align-self: stretch;
+}
+  .category1{
+  display: flex;
+  width: 220px;height: 52px;
+  flex-direction: row; 
+  justify-content: space-between;
+  align-items: center;
+  align-self: stretch; 
+  color: #333;
+  /* H3 */
+  font-family: Pretendard;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px; /* 133.333% */
+}
+.category2{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  align-self: stretch;
+}
+.checkbox{
+  display: flex;
+width: 18px;
+height: 18px;
+justify-content: center;
+align-items: center;
+gap: 10px;
+border-radius: 4px;
+border: 1px solid #E2E2E2;
+}
+.category2-1{
+display: flex;
+padding-bottom: 16px;
+justify-content: center;
+align-items: center;
+gap: 5px;
+}
+.categoryNumber{
+color:  #DDD;
+/* Caption */
+font-family: Pretendard;
+font-size: 12px;
+font-style: normal;
+font-weight: 400;
+line-height: 16px; /* 133.333% */
+}
+
+.leftBox{
+  display: flex;
+  width: 220px;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.rightBox{
+  display:flex;
+  flex-direction: column;
+  width: 783px;
+}
+.frame{
+  display: flex;
+  width: 1050px;
+  height: 598px;
+padding-top: 50px;
+align-items: flex-start;
+gap: 47px;
+align-self: stretch;
+margin: 0 auto;
+}
+.sortingBar{
+  display: flex;
+  width: 783px;
+  height: 20px;
+padding-bottom: 20px;
+justify-content: space-between;
+align-items: flex-start;
+align-self: stretch;
+
+flex-direction: row;
+align-items: flex-start;
+flex: 1 0 0;
+}
+.sortingBar div:nth-child(1){
+  color: #333;
+
+}
+.sortingBar1{
+color: #333;
+
+/* H3 */
+font-family: Pretendard;
+font-size: 15px;
+font-style: normal;
+font-weight: 500;
+line-height: 20px; /* 133.333% */
+}
+.sortingBar2{
+ display:flex;
+align-items: center;
+ flex-direction: row;
+  color: #999;
+
+/* H3 */
+font-family: Pretendard;
+font-size: 15px;
+font-style: normal;
+font-weight: 500;
+line-height: 20px; /* 133.333% */
+}
+.sortingBarLine{
+width: 1px;
+height: 10px;
+ background: #E2E2E2;
+display: flex;
+justify-content: center;
+align-items: center;
+margin: 0 8px;
+}
+/*제품 전체*/
+.productFrame{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-top: 32px;
+  width: 801px;
+  height: 100%;
+  gap: 18px;
+}
+/*제품 한 칸*/
+
+/*사진 구역*/
+.productCard1{
+  width: 249px;
+  height: 320px;
+  object-fit: cover;
+  background: #E2E2E2;
+}
+
+/*담기 버튼*/
+.productCard2{
+   margin-top: 6px;
+  margin-bottom: 6px;
+
+  display: flex;
+flex-direction: row;
+gap: 6px;
+width: 249px;
+height: 36px;
+justify-content: center;
+align-items: center;
+align-self: stretch;
+border-radius: 4px;
+border: 1px solid var(--stroke-stroke-2, #E2E2E2);
+}
+/*샛별배송부터 가격까지 감싸는*/
+.productCard3{
+  display: flex;
+flex-direction: column;
+align-items: flex-start;
+height: fit-content;
+}
+/*샛별 배송*/
+.productCard3-1{
+  color: #999;
+
+/* B2 */
+font-family: Pretendard;
+font-size: 14px;
+font-style: normal;
+font-weight: 400;
+line-height: 20px; /* 142.857% */
+letter-spacing: -1px;
+}
+/*품명*/
+.productCard3-2{
+ display: flex;
+ width: 249px;
+align-items: flex-start;
+margin-top: 4px;
+  flex: 1 0 0;
+  color: #333;
+/* B1 */
+font-family: Pretendard;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: 24px; /* 150% */
+}
+.productCard3-3{
+flex: 1 0 0;
+color: #999;
+margin-top: 4px;
+/* Caption */
+font-family: Pretendard;
+font-size: 12px;
+font-style: normal;
+font-weight: 400;
+}
+.productCard3-4{
+  margin-top: 8px;
+  color: var(--font-font2, #999);
+font-family: Pretendard;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+
+text-decoration-line: line-through;
+}
+.productCardPrice{
+  display: flex;
+padding: 8px 10px 0px 0px;
+flex-direction: column;
+align-items: flex-start;
+align-self: stretch;
+}
+.productCardSale{
+ display: flex;
+align-items: flex-start;
+gap: 8px;
+}
+.productCard3-5{
+  color: #FA622F;
+/* B1-bold */
+font-family: Pretendard;
+font-size: 16px;
+font-style: normal;
+font-weight: 700;
+line-height: 24px; /* 150% */
+}
+.productCard3-6{
+  color: var(--font-font-1, #333);
+
+/* B1-bold */
+font-family: Pretendard;
+font-size: 16px;
+font-style: normal;
+font-weight: 700;
+line-height: 24px; /* 150% */
+  
+}
