@@ -11,4 +11,3 @@ customTag.addClassName('myClass1');
 customTag.addClassName('myClass2');
 customTag.removeClassName('myClass2');
 
-console.log(customTag.toHTML());
