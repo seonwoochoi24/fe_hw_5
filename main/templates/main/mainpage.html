@@ -5,28 +5,100 @@
   type="text/css"
   href="{% static 'css/main/main_page.css'%}"
 />
+<div class="alignRank">
+  <div class="rankBox">
+  <a class="menuName" href="#">인기신상랭킹</a>
+  <a class="menuName" href="#">입점특가</a>
+  <a class="menuName" href="#">간편한끼</a>
+  <a class="menuName" href="#">요즘간식</a>
 
-<!-- 코드 작성시, 아래 부분(script 태그 이전)은 전체 삭제하고 작성하세요 -->
-
-<!----------------tip!---------------->
-<!-- 상품 데이터베이스는 프로젝트에 넣어뒀어요 -->
-<!-- 아래와 같은 형식으로 for문을 사용하여 작성하세요 -->
-
-<!-- 데이터 사용 예시 -->
-<div style="display: flex">
-  {% for product in products %}
-  <a href="product/{{product.id}}">
-    <img src="{{product.image_url}}" style="width: 100px" />
-    <p>{{product}}</p>
-    <p>{{product.description}}</p>
-    <p>{{product.origin_price}}원</p>
-    <p>{{product.discount_rate}}%</p>
-    <p>{{product.discount_price}}원</p>
-  </a>
-  {% endfor %}
+  <a class="menuName" href="#">주방·리빙</a>
+  <a class="menuName" href="#">뷰티</a>
+  <a class="menuName" href="#">패션·잡화</a> 
 </div>
-<!-- 데이터 사용 예시 -->
+</div>
 
+
+<div class="frame">
+  <div class="leftBox">
+    <div class="filterBox">
+      <div class="filter1">
+        <div class="filter1-1">
+          <div>필터</div>
+        </div>
+        <div class="filter1-2">
+          <img src="{% static 'assets/icons/reset.svg' %}" alt="restart icon" />
+          <div>초기화</div>
+        </div>
+      </div>
+    </div>
+  
+    <div class="categoryBox">
+      <div class="category1">  
+        <div>카테고리</div>
+        <img src="{% static 'assets/icons/up.svg' %}" alt="up icon" />
+      </div>
+    </div>
+
+    <div class="category2">
+      <div class="category2-1">
+        <div class="checkbox"></div>
+        <div>스킨케어·메이크업</div>
+        <div class="categoryNumber">68</div>
+      </div>
+      <div class="category2-1">
+        <div class="checkbox"></div>
+        <div>럭셔리뷰티</div>
+        <div class="categoryNumber">24</div>
+      </div>
+      <div class="category2-1">
+        <div class="checkbox"></div>
+        <div>간식·과자·떡</div>
+        <div class="categoryNumber">28</div>
+      </div>   
+    </div>
+  </div>
+<div class="rightBox">
+  <div class="sortingBar">
+    <div class="sortingBar1">총 508건</div>
+   
+    <div class="sortingBar2">
+  <div>추천순</div>
+  <div class="sortingBarLine"></div>
+  <div>신상품순</div>
+  <div class="sortingBarLine"></div>
+  <div>판매량순</div>
+  <div class="sortingBarLine"></div>
+  <div>낮은 가격순</div>
+  <div class="sortingBarLine"></div>
+  <div>높은 가격순</div>
+  </div>
+ </div>
+<div class="productFrame">
+
+{% for product in products %}
+<div class="productCard3">
+  <img class="productCard1" src="{% static 'assets/images/풀무원.jpg' %}" alt="풀무원 사진" />
+  <div class="productCard2">
+    <img src="{% static 'assets/icons/cart.svg' %}" alt="cart icon" />
+    <div>담기</div>
+  </div>
+  <div class="productCard3-1">샛별배송</div>
+  <div class="productCard3-2">{{ product.name }}</div>
+  <div class="productCard3-3">{{ product.description }}</div>
+  
+  <div class="productCardPrice">
+      <div class="productCard3-4">{{ product.origin_price }}</div>
+    <div class="productCardSale">
+      <div class="productCard3-5">{{ product.discount_rate }}%</div>
+      <div class="productCard3-6">{{ product.discount_price }}원</div>
+    </div>
+  </div>
+</div>
+{% endfor %}
+</div>
+</div>
+</div>
 <!-- js 파일 -->
 <script src="{% static 'js/main/main_page.js'%}"></script>
 {% endblock %}
