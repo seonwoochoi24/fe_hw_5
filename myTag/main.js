@@ -13,25 +13,25 @@ const customTag = {
     changeTagName: function(newTagName){
 
         this.tagName=newTagName;
-       this.render('container')
+    
 
     }, //태그의 tagName을 바꾸는 함수
 
     changeTextContent: function(newText){
 
         this.textContent=newText;
-        this.render('container')
+    
     }, //태그의 textContent를 바꾸는 함수
 
     changeStyles: function(style, newValue){
 
         this.styles[style]=newValue;
-       this.render('container')
+    
     }, //태그의 스타일을 바꾸는 함수
 
     setId: function(newId){
         this.id=newId;
-        this.render('container')
+    
 
     }, //태그의 아이디를 바꾸는 함수
 
@@ -39,13 +39,13 @@ const customTag = {
        if(!this.class.includes(newClassName)){
             this.class.push(newClassName);
        }
-      this.render('container')
+
     }, //태그의 클래스 이름를 추가하는 함수
 
     removeClassName: function(selectedClass){
 
         this.class=this.class.filter(cls=>cls!==selectedClass);
-        this.render('container')
+    
     }, //태그의 특정 클래스 이름를 제거하는 함수
 
 
@@ -79,5 +79,11 @@ const customTag = {
         } else {
             console.error(`Container with ID "${containerId}" not found.`);
         }
-    }
+    } 
+
+
+
 }
+window.addEventListener('DOMContentLoaded', () => {
+    customTag.render('container');
+});
