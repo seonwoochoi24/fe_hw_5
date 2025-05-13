@@ -1,7 +1,4 @@
 //index.js
-// index.js 맨 위에 추가
-const customTag = require('./main');
-
 customTag.changeTagName('P');
 customTag.changeTextContent('아기사자');
 customTag.changeStyles('color', 'red');

@@ -5,37 +5,51 @@ const customTag = {
     styles: {
         color: "orange",//글자의 색
         fontSize: "16px" //글자 크기
+
     },
     id: "", //태그의 id
     class: [], //태그의 클래스들
 
     changeTagName: function(newTagName){
+
         this.tagName=newTagName;
+       this.render('container')
+
     }, //태그의 tagName을 바꾸는 함수
 
     changeTextContent: function(newText){
+
         this.textContent=newText;
+        this.render('container')
     }, //태그의 textContent를 바꾸는 함수
 
     changeStyles: function(style, newValue){
+
         this.styles[style]=newValue;
+       this.render('container')
     }, //태그의 스타일을 바꾸는 함수
 
     setId: function(newId){
         this.id=newId;
+        this.render('container')
+
     }, //태그의 아이디를 바꾸는 함수
 
     addClassName: function(newClassName){
        if(!this.class.includes(newClassName)){
             this.class.push(newClassName);
        }
+      this.render('container')
     }, //태그의 클래스 이름를 추가하는 함수
 
     removeClassName: function(selectedClass){
+
         this.class=this.class.filter(cls=>cls!==selectedClass);
+        this.render('container')
     }, //태그의 특정 클래스 이름를 제거하는 함수
 
-    // 여기 아래 부분은 수정하지 마시오.
+
+     // 여기 아래 부분은 수정하지 마시오.
     toHTML() {
         // 클래스 문자열 생성
         const classString = this.class.length > 0 ?
@@ -67,6 +81,3 @@ const customTag = {
         }
     }
 }
-// main.js 마지막 줄에 추가
-module.exports = customTag;
-
