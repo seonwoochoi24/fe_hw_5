@@ -3,7 +3,7 @@
 <link
   rel="stylesheet"
   type="text/css"
-  href="{% static 'css/main/main_page.css'%}"
+  href="{% static 'css/main/main_page.css'%}?v=999"
 />
 <div class="alignRank">
   <div class="rankBox">
@@ -26,7 +26,7 @@
         <div class="filter1-1">
           <div>필터</div>
         </div>
-        <div class="filter1-2">
+        <div class="filter1-2"  id="resetBtn">
           <img src="{% static 'assets/icons/reset.svg' %}" alt="restart icon" />
           <div>초기화</div>
         </div>
@@ -42,20 +42,31 @@
 
     <div class="category2">
       <div class="category2-1">
-        <div class="checkbox"></div>
+        <label class="customCheckbox">
+          <input type="checkbox" name="check_group" value="스킨케어·메이크업" />
+          <img class="checkImg" src="{% static 'assets/icons/done.svg' %}" alt="done icon" />
+        </label>
         <div>스킨케어·메이크업</div>
         <div class="categoryNumber">68</div>
       </div>
+      
       <div class="category2-1">
-        <div class="checkbox"></div>
+        <label class="customCheckbox">
+          <input type="checkbox" name="check_group" value="럭셔리뷰티" />
+          <img class="checkImg" src="{% static 'assets/icons/done.svg' %}" alt="done icon" />
+        </label>
         <div>럭셔리뷰티</div>
         <div class="categoryNumber">24</div>
-      </div>
-      <div class="category2-1">
-        <div class="checkbox"></div>
+     </div>
+       
+     <div class="category2-1">
+      <label class="customCheckbox">
+        <input type="checkbox" name="check_group" value="간식·과자·떡" />
+        <img class="checkImg" src="{% static 'assets/icons/done.svg' %}" alt="done icon" />
+      </label>
         <div>간식·과자·떡</div>
         <div class="categoryNumber">28</div>
-      </div>   
+      </div>  
     </div>
   </div>
 <div class="rightBox">
@@ -74,9 +85,15 @@
   <div>높은 가격순</div>
   </div>
  </div>
+  <div class="selectedCategories">
+    <div class="selectedCategory"> </div>
+  </div>
 <div class="productFrame">
 
+ 
+
 {% for product in products %}
+<a href="product/{{product.id}}">
 <div class="productCard3">
   <img class="productCard1" src="{% static 'assets/images/풀무원.jpg' %}" alt="풀무원 사진" />
   <div class="productCard2">
@@ -99,6 +116,7 @@
 </div>
 </div>
 </div>
+</a>
 <!-- js 파일 -->
 <script src="{% static 'js/main/main_page.js'%}"></script>
 {% endblock %}

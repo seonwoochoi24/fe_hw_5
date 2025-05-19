@@ -1,1 +1,277 @@
 /* product detail page - CSS */
+.productPhoto{
+    width: 430px;
+height: 550px;
+
+border-radius: 8px;
+background: #D9D9D9;
+}
+
+.detailpagedivideLine{
+    background: #E2E2E2;
+    width: 570px;
+height: 1px;
+}
+.detailpageFrame{
+    width: 1050px;
+    height: 550px;
+    margin: 0 auto;
+    padding-top:50px;
+    display: flex;
+align-items: flex-start;
+gap: 50px;
+align-self: stretch;
+justify-content: space-between;
+}
+.detailpageInfoFrame{
+    width: 570px;
+    height: 550px;
+    display: flex;
+    flex-direction: column;
+}
+.detailpageProductDeliver{
+    color:#999;
+    font-family: Pretendard;
+font-size: 15px;
+font-style: normal;
+font-weight: 500;
+line-height: 20px;
+
+}
+.detailpageProductName{
+    display: flex;
+    padding-top: 8px;
+    align-items: flex-start;
+    color: #333;
+    font-family: Pretendard;
+font-size: 24px;
+font-style: normal;
+font-weight: 500;
+line-height: 32px; 
+letter-spacing: -1px;
+}
+.detailpageProductRatePrice{
+  
+    height: 32px;
+    padding: 20px 0px 20px 0px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.detailpageProductRate{
+margin-right: 8px;
+    color: #FA622F;
+    font-family: Pretendard;
+
+    font-size: 28px;
+font-style: normal;
+font-weight: 600;
+line-height: 32px; /* 114.286% */
+letter-spacing: -1px;
+
+}
+.detailpageProductPrice{
+    color:  #333;
+font-family: Pretendard;
+font-size: 28px;
+font-style: normal;
+font-weight: 600;
+line-height: 32px; /* 114.286% */
+letter-spacing: -1px;
+}
+.detailpageProductNoticeFrame{
+    width: 570px;
+   
+    padding: 20px 0px;
+    display: flex;
+    flex-direction: row;
+
+}
+.detailpageProductNoticeTitle{
+    width: 128px;
+    height: 20px;
+    color: #999;
+
+/* B2-bold */
+font-family: Pretendard;
+font-size: 14px;
+font-style: normal;
+font-weight: 600;
+line-height: 20px; /* 142.857% */
+letter-spacing: -1px;
+}
+.detailpageProductNotice{
+   min-height: 40px;
+   flex:1;
+    color: #333;
+font-family: Pretendard;
+font-size: 14px;
+font-style: normal;
+font-weight: 400;
+line-height: 20px; 
+letter-spacing: -1px;
+}
+.detailpageRightFrame{
+    display:flex;
+    width: 570px;
+    min-height: 550px;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.detailpageProductSelectFrame{
+  
+    display: flex;
+    flex-direction: row;
+   width: 570px;
+   min-height: 85px;
+   padding: 20px 0px;
+}
+
+.detailpageProductSelectTitle{
+    width: 128px;
+    height: 20px;
+    color: #999;
+    font-family: Pretendard;
+font-size: 14px;
+font-style: normal;
+font-weight: 600;
+line-height: 20px; /* 142.857% */
+letter-spacing: -1px;
+}
+.detailpageProductSelectNameFrame{
+    border: 1px solid #E2E2E2;
+    display: flex;
+    flex-direction: column;
+       width: 422px;
+    min-height: 60px;
+    padding: 10px 10px 15px 10px;
+    gap: 12px;
+}
+.detailpageProductSelectName{
+    min-height: 20px;
+    color:  #999;
+/* B2 */
+font-family: Pretendard;
+font-size: 14px;
+font-style: normal;
+font-weight: 400;
+line-height: 20px; /* 142.857% */
+letter-spacing: -1px;
+}
+.detailpageProductSelectNumberFrame{
+
+width: 72px;
+height: 20px;
+
+           display: flex;
+padding: 4px;
+align-items: flex-start;
+border-radius: 4px;
+border: 1px solid #E2E2E2;
+}
+
+.detailpageProductSelectMinus{
+    width: 20px;
+    height: 20px;
+    color:  #333;
+text-align: center;
+
+/* B2-bold */
+font-family: Pretendard;
+font-size: 14px;
+font-style: normal;
+font-weight: 600;
+line-height: 20px; /* 142.857% */
+letter-spacing: -1px;
+}
+.detailpageProductSelectNumber{
+    display: flex;
+    align-items: center;
+    align-self: center;
+    text-align: center;
+    justify-content: center;
+
+    width: 32px;
+    height: 20px;
+}
+.detailpageProductSelectPlus{
+     width: 20px;
+    height: 20px;
+color: var(--font-font-1, #333);
+text-align: center;
+
+/* B2-bold */
+font-family: Pretendard;
+font-size: 14px;
+font-style: normal;
+font-weight: 600;
+line-height: 20px; /* 142.857% */
+letter-spacing: -1px;
+}
+.detailpageBottomFrame{
+    width: 570px;
+    height: 112px;
+margin-top: auto;
+}
+.detailpageProductTotalPriceFrame{
+    width: 570px;
+    height: 32px;
+    display: flex;
+    justify-content: end;
+padding-bottom: 24px;
+}
+.detailpageProductTotalPriceFrameSmall{
+
+
+    height: 32px;
+
+display: flex;
+flex-direction: row;
+gap: 8px;
+}
+.detailpageProductTotalPriceTitle{
+
+    height: 20px;
+    color: #000;
+    display: flex;
+   align-self: flex-end;
+    font-family: Pretendard;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px; 
+    letter-spacing: -1px;
+}
+.detailpageProductTotalPrice{
+
+
+    height: 32px;
+    color: #333;
+    font-family: Pretendard;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 32px;
+    letter-spacing: -1px;
+    }
+.detailpageloginButton{
+    display: flex;
+    width: 570px;
+    height: 24px;
+padding: 16px 0px;
+justify-content: center;
+align-items: center;
+align-self: stretch;
+border-radius: 4px;
+background: #5E0080;
+color: #FFF;
+text-align: center;
+
+/* Btn */
+font-family: Pretendard;
+font-size: 16px;
+font-style: normal;
+font-weight: 500;
+line-height: 24px; /* 150% */
+}
