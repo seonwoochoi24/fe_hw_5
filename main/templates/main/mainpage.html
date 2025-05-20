@@ -26,8 +26,11 @@
         <div class="filter1-1">
           <div>필터</div>
         </div>
-        <div class="filter1-2"  id="resetBtn">
-          <img src="{% static 'assets/icons/reset.svg' %}" alt="restart icon" />
+        <div class="filter1-2" id="resetBtn">
+          <img id="resetIcon" src="{% static 'assets/icons/reset.svg' %}" 
+          data-dark-src="{% static 'assets/icons/reset_copy.svg' %}"
+          data-origin-src="{% static 'assets/icons/reset.svg' %}"
+          alt="restart icon" />
           <div>초기화</div>
         </div>
       </div>
@@ -85,35 +88,32 @@
   <div>높은 가격순</div>
   </div>
  </div>
-  <div class="selectedCategories">
-    <div class="selectedCategory"> </div>
-  </div>
-<div class="productFrame">
 
- 
+  <div class="selectedCategories"></div>
 
-{% for product in products %}
-<a href="product/{{product.id}}">
-<div class="productCard3">
-  <img class="productCard1" src="{% static 'assets/images/풀무원.jpg' %}" alt="풀무원 사진" />
-  <div class="productCard2">
-    <img src="{% static 'assets/icons/cart.svg' %}" alt="cart icon" />
-    <div>담기</div>
-  </div>
-  <div class="productCard3-1">샛별배송</div>
-  <div class="productCard3-2">{{ product.name }}</div>
-  <div class="productCard3-3">{{ product.description }}</div>
-  
-  <div class="productCardPrice">
-      <div class="productCard3-4">{{ product.origin_price }}원</div>
-    <div class="productCardSale">
-      <div class="productCard3-5">{{ product.discount_rate }}%</div>
-      <div class="productCard3-6">{{ product.discount_price }}원</div>
+  <div class="productFrame">
+    {% for product in products %}
+    <a href="product/{{product.id}}">
+    <div class="productCard3">
+      <img class="productCard1" src="{% static 'assets/images/풀무원.jpg' %}" alt="풀무원 사진" />
+      <div class="productCard2">
+        <img src="{% static 'assets/icons/cart.svg' %}" alt="cart icon" />
+        <div>담기</div>
+      </div>
+      <div class="productCard3-1">샛별배송</div>
+      <div class="productCard3-2">{{ product.name }}</div>
+      <div class="productCard3-3">{{ product.description }}</div>
+      
+      <div class="productCardPrice">
+          <div class="productCard3-4">{{ product.origin_price }}원</div>
+        <div class="productCardSale">
+          <div class="productCard3-5">{{ product.discount_rate }}%</div>
+          <div class="productCard3-6">{{ product.discount_price }}원</div>
+        </div>
+      </div>
     </div>
+    {% endfor %}
   </div>
-</div>
-{% endfor %}
-</div>
 </div>
 </div>
 </a>

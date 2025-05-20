@@ -15,10 +15,10 @@
 border: 1px solid #E2E2E2;
 }
 .selectedCategories{
-  display: flex;
+  display: none;
   width: 751px;
   height: 20px;
-  padding: 20px  18px ;
+  padding: 20px  16px 18px  16px;
 
   flex-direction: row;
 
@@ -27,15 +27,18 @@ border: 1px solid #E2E2E2;
 
 .selectedCategory{
   color:  #5E0080;
-margin-right: 16px;
+margin-right: 12px;
   font-family: Pretendard;
 font-size: 14px;
 font-style: normal;
 font-weight: 400;
 line-height: 20px; 
 letter-spacing: -1px;
-
+display: flex;
+flex-direction: row;
+gap:4px;
 }
+
 .menuName{
   display: flex;
   width: 180px;

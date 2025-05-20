@@ -20,9 +20,16 @@ document.addEventListener("DOMContentLoaded", () => {
         const count = parseInt(parent.querySelector(".categoryNumber").textContent, 10);
         //그걸 총 개수에 더함
         total += count;
-      }
+  
+       };
+    
     });
     //모든 체크박스를 돌고 나서 sortingBar에 있는 총 00건을 총 숫자로 바꿈
+    //카테고리가 선택되어있으면 초기화 버튼 색이 진해짐
+    
+    if (total==0){
+      total=508
+    };
     sortingBar.textContent = `총 ${total}건`;
   }
 
@@ -42,7 +49,6 @@ document.addEventListener("DOMContentLoaded", () => {
           div.className = "selectedCategory";
           //value에 카테고리명이 들어감
           div.setAttribute("data-value", value);
-
           //div 안에 텍스트랑 X 아이콘 넣음
           div.innerHTML = `
             ${value}
@@ -59,6 +65,14 @@ document.addEventListener("DOMContentLoaded", () => {
       }
 
       updateTotalCount();//항목개수 계산 다시
+      if (selectedBox.children.length > 0) {
+        selectedBox.style.display = 'flex';
+        document.getElementById("resetBtn").style.color = "#999";
+        document.getElementById("resetIcon").src
+        =document.getElementById("resetIcon").dataset.darkSrc;
+      } else {
+        selectedBox.style.display = 'none';
+      }
     });
   });
 
@@ -73,7 +87,21 @@ selectedBox.addEventListener("click", (e) => {
     if (checkbox) checkbox.checked = false; // 체크 해제
     div.remove(); // 항목 제거
     updateTotalCount(); // 총 개수 업데이트
+   
+  } 
+  //남은 게 하나 이상이면 박스 보이기, 색 진하기 
+  if (selectedBox.children.length > 0) {
+    selectedBox.style.display = 'flex';
+    document.getElementById("resetBtn").style.color = "#999";//연한거
+      document.getElementById("resetIcon").src
+        =document.getElementById("resetIcon").dataset.darkSrc;
+  } else {
+    selectedBox.style.display = 'none';
+    document.getElementById("resetBtn").style.color = "#DDD";//진한거
+       document.getElementById("resetIcon").src
+        =document.getElementById("resetIcon").dataset.originSrc;
   }
+
 });
 
 //리스타트버튼 눌렀을 때
@@ -82,7 +110,14 @@ selectedBox.addEventListener("click", (e) => {
     checkboxes.forEach(cb => cb.checked = false);
     //selectedCategories 비우기
     selectedBox.innerHTML = "";
+   
     //물건 개수도 초기화
     updateTotalCount();
-  });
+    selectedBox.style.display = 'none';
+    document.getElementById("resetBtn").style.color = "#DDD";
+    document.getElementById("resetIcon").src
+        =document.getElementById("resetIcon").dataset.originSrc;
+});
+
+
 });
