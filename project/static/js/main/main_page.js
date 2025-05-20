@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", () => {
     //카테고리가 선택되어있으면 초기화 버튼 색이 진해짐
     
     if (total==0){
-      total=508
+      total=120
     };
     sortingBar.textContent = `총 ${total}건`;
   }
@@ -72,6 +72,9 @@ document.addEventListener("DOMContentLoaded", () => {
         =document.getElementById("resetIcon").dataset.darkSrc;
       } else {
         selectedBox.style.display = 'none';
+         document.getElementById("resetBtn").style.color = "#DDD";
+        document.getElementById("resetIcon").src
+        =document.getElementById("resetIcon").dataset.originSrc;
       }
     });
   });
