@@ -55,6 +55,7 @@ document.addEventListener("DOMContentLoaded", () => {
             <img src="/static/assets/icons/close.svg" alt="close icon" class="removeIcon" />`;
             //html에 있는 selectedCategories에 div 추가
             selectedBox.appendChild(div);
+            
         }} 
         //체크가 해제되면
         else {

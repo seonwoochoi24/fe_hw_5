@@ -1,6 +1,59 @@
 <!-- 임시 회원가입 페이지 -->
-{% extends 'base.html' %} {% block content %}
+{% extends 'base.html' %} {% block content %}{% load static %}
+
+<link
+  rel="stylesheet"
+  type="text/css"
+  href="{% static 'css/accounts/signup.css' %}?v=999"
+/>
 <div class="container">
-  <h2>회원가입</h2>
+  <div class="container_Signup">
+    <div class="title_Signup">회원가입</div>
+    <div class="divideLineTop_Signup"></div>
+      <form method="POST" action="{% url 'accounts:signup' %}" class="inputListFrame_Signup" id="signupForm_Signup">
+      {% csrf_token %}
+    
+        <div class="idInputFrame_Signup">
+           {% csrf_token %}
+          <div class="idInputTitle_Signup">아이디</div>
+          <input class="idInputBox_Signup" id="idInputBox_Signup" type="text" name="username" placeholder="아이디를 입력해주세요">
+        </div>
+    
+
+      <div class="pwInputFrame_Signup">
+        <div class="pwInputTitle_Signup">비밀번호</div>
+        <div class="pwInputMiniFrame_Signup">
+          <input class="pwInputBox_Signup"id="pwInputBox_Signup" type="password" name="password" placeholder="비밀번호를 입력해주세요">
+          <div class="pwDescription_Signup" >
+            <div>· 비밀번호를 8자 이상으로 작성해주세요. </div>
+            <div>· 영문 대소문자, 숫자, 특수문자를 하나 이상 포함해주세요.</div>
+            <div>· 사용가능 특수문자  @ ! ? - _</div>
+          </div>
+        </div>
+      </div>
+     
+        <div class="pwCheckInputFrame_Signup">
+          <div class="pwCheckInputTitle_Signup">비밀번호 확인</div>
+         <div>
+ <input class="pwCheckInputBox_Signup" id="pwCheckInputBox_Signup" type="password" name="password2" placeholder="비밀번호를 한번 더 입력해주세요">
+            <small class="pwCheckWarning_Signup">비밀번호가 일치하지 않습니다!</small>
+        
+         </div>
+           
+        </div>
+   </form>
+    
+      </div>
+      
+        
+
+    <div class="divideLineBottom_Signup"></div>
+  
+  <button disabled class="signupButton_Signup" form="signupForm_Signup" id="signupButton_Signup">가입하기</button>
 </div>
+{% endblock %}
+{% block scripts %}
+<!-- js 파일 -->
+<script src="{% static 'js/accounts/signup.js' %}"></script>
+
 {% endblock %}

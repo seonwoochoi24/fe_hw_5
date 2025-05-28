@@ -1,6 +1,36 @@
-<!-- 임시 로그인 페이지 -->
-{% extends 'base.html' %} {% block content %}
-<div class="container">
-  <h2>로그인</h2>
+{% extends 'base.html' %} {% load static %}  {% block content %}
+<link
+  rel="stylesheet"
+  type="text/css"
+  href="{% static 'css/accounts/login.css' %}?v=999"
+/>
+<div class="container_Login"> 
+  <div class="titleInputFrame_Login">
+    <div class="title_Login">로그인</div>
+    <div class="titleInputFrame_Login">
+      <div class="inputFrame_Login">
+        <form class="inputFrame_Login">
+
+          <input class="idInputBox_Login" id="idInputBox_Login" type="text" name="user_id" placeholder="아이디를 입력해주세요.">
+          <input class="pwInputBox_Login" id="pwInputBox_Login" type="password" name="user_password" placeholder="비밀번호를 입력해주세요.">
+        </form>
+      </div>
+      <div class="searchFrame_Login">
+        <button class="findIdButton_Login">아이디 찾기</button>
+        <div class="divideSearchLine_Login">|</div>
+        <button class="findPwButton_Login">비밀번호 찾기</button>
+      </div>
+    </div>
+  </div>
+<div class="buttonFrame_Login">
+    <button class="loginButton_Login" id="loginButton_Login" type="submit">로그인</button>
+    <button class="signupButton_Login" id="signupButton_Login">회원가입</button>
 </div>
+</div> 
+{% endblock %}
+
+{% block scripts %}
+<!-- js 파일 -->
+<script src="{% static 'js/accounts/login.js' %}"></script>
+
 {% endblock %}

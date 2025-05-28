@@ -1,1 +1,172 @@
 /* login page - CSS */
+/*body*/
+.container_Login{
+    width: 1050px;
+    height: 388px;
+    padding-top: 50px;
+    gap:48px;
+
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: center;
+}
+/*Frame 30*/
+.titleInputFrame_Login{
+    width: 340px;
+    height: 216px;
+    gap: 32px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+.title_Login{
+
+    color:black;
+    font-family: Pretendard;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 32px;
+    letter-spacing: -1px;
+}
+
+/*input list*/
+.inputFrame_Login{
+    width: 340px;
+    height: 104px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    align-self: stretch;
+}
+.idInputBox_Login{
+    display: flex;
+    width:328px;
+    height: 46px;
+    padding: 0px 1px 0px 11px;
+    align-items: center;
+    gap: 10px;
+    border-radius: 4px;
+    border: 1px solid #CCC;
+}
+.pwInputBox_Login{
+    display: flex;
+    width:328px;
+    height: 46px;
+    padding: 0px 1px 0px 11px;
+    align-items: center;
+    gap: 10px;
+    border-radius: 4px;
+    border: 1px solid #CCC;
+}
+
+/*Frame 36*/
+.searchFrame_Login{
+    width: 340px;
+    height: 16px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 4px;
+}
+.findIdButton_Login{
+    all:unset;
+    color: #333;
+    text-align: right;
+
+
+    font-family: Pretendard;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16px; 
+    cursor: pointer;
+
+}
+.divideSearchLine_Login{
+    color: #333;
+text-align: right;
+
+font-family: Pretendard;
+font-size: 12px;
+font-style: normal;
+font-weight: 400;
+line-height: 16px; 
+}
+.findPwButton_Login{
+    all:unset;
+    color: #333;
+    text-align: right;
+
+
+    font-family: Pretendard;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16px; 
+    cursor: pointer;
+
+
+}
+
+
+/*Frame 35*/
+.buttonFrame_Login{
+
+    width: 340px;
+    height: 124px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+}
+.loginButton_Login{
+    all: unset;
+    width: 340px;
+    height: 24px;
+    padding: 16px 0px 16px 0px;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    background: #E2E2E2;
+    color:#999;
+    text-align: center;
+
+    font-family: Pretendard;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px;
+}
+.signupButton_Login{
+ all: unset;
+    width: 340px;
+    height: 24px;
+    padding: 16px 0px 16px 0px;
+    
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    border: 1px solid #5E0080;
+    color:#5E0080;
+    text-align: center;
+
+    font-family: Pretendard;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px;
+}

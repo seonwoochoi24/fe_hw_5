@@ -172,6 +172,7 @@ border: 1px solid #E2E2E2;
 }
 
 .detailpageProductSelectMinus{
+    cursor: pointer;
     width: 20px;
     height: 20px;
     color:  #333;
@@ -196,6 +197,7 @@ letter-spacing: -1px;
     height: 20px;
 }
 .detailpageProductSelectPlus{
+    cursor: pointer;
      width: 20px;
     height: 20px;
 color: var(--font-font-1, #333);
