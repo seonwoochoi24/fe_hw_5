@@ -53,7 +53,7 @@ function checkInputs() {
     }
 }
 
+
 inputId.addEventListener("input", checkInputs);
 inputPw.addEventListener("input", checkInputs);
 inputPwCheck.addEventListener("input", checkInputs);
-signupButton.addEventListener("click", moveToLoginPage);
