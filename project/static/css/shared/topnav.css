@@ -268,3 +268,7 @@ input::placeholder {
   width: 1rem;
   height: 1rem;
 }
+
+a.Caption:hover{
+  color:#5e0080;
+}
